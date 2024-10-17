@@ -1,0 +1,28 @@
+#herosection{
+    background-image:url(https://i.pinimg.com/564x/55/fb/67/55fb6787f2d0a55d9fd021b6bbbc1654.jpg);
+    background-position: right;
+      background-size: 100% 100%;
+   /* background-size: contain; */
+    background-repeat: no-repeat;
+    /* box-shadow: 5px 5px 5px rgb(230, 225, 225); */
+    /* animation: slider 10s linear infinite; */
+  
+}
+/* @keyframes slider{ */
+    /* 0%{background-image: url(https://i.pinimg.com/736x/bc/cb/c1/bccbc109751c294359acc1c984133081.jpg);} */
+    /* 100%{background-image:url(../app/herodog.jpg);} */
+    /* 60%{background-image: url(https://i.pinimg.com/236x/ef/8a/aa/ef8aaa30e1ee4c98599d22bb37956069.jpg);} */
+    /* 100%{background-image: url(https://i.pinimg.com/236x/16/2a/49/162a4996471a69b7ed12e2e998005bc7.jpg);} */
+/* } */
+
+/* #backsign{
+    background-image: url(../app/as.png);
+} */
+
+
+#container:hover{
+  transition: 1s ease;
+  transform: scale(1.1);
+}
+
+
