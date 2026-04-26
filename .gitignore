@@ -22,6 +22,8 @@ yarn-error.log*
 
 # env files (IMPORTANT)
 .env*
+backend/.env
+frontend/.env
 
 # vercel
 .vercel/
