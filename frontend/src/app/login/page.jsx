@@ -42,7 +42,8 @@ const Login = () => {
         toast.success("Login successful 🎉");
 
         // ✅ redirect after login
-        router.push("/add-pet");
+        // router.push("/add-pet");
+        router.push("/dashboard");
 
         resetForm();
       } catch (err) {
