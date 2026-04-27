@@ -205,6 +205,52 @@ router.post("/adddetail", async (req, res) => {
 });
 
 // Get all users
+
+// router.get("/me", (req, res) => {
+//   try {
+//     const token = req.headers.authorization?.split(" ")[1];
+
+//     if (!token) {
+//       return res.status(401).json({ message: "No token" });
+//     }
+
+//     const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+//     res.json({
+//       name: decoded.name,
+//       email: decoded.email,
+//     });
+//   } catch (err) {
+//     res.status(401).json({ message: "Invalid token" });
+//   }
+// });
+
+router.get("/me", async (req, res) => {
+  try {
+    const token = req.headers.authorization?.split(" ")[1];
+
+    if (!token) {
+      return res.status(401).json({ message: "No token" });
+    }
+
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+    // ✅ fetch user from DB using id
+    const user = await Model.findById(decoded.id);
+
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    res.json({
+      name: user.name,
+      email: user.email,
+    });
+  } catch (err) {
+    res.status(401).json({ message: "Invalid token" });
+  }
+});
+
 router.get("/getdetail", async (req, res) => {
   try {
     const result = await Model.find();
