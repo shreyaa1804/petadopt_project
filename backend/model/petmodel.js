@@ -1,4 +1,4 @@
-const {Schema,model}= require('../connection');
+const {Schema,model}= require('mongoose');
  const petSchema = new Schema({
     name: { type:String, required:true},
     breed:{type:String},
