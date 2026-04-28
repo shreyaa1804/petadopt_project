@@ -11,6 +11,7 @@ const port = 5000;
 
 const userrouter = require("./router/userrouter");
 const petrouter = require("./router/petrouter");
+const cartrouter=require("./router/cartrouter");
 
 app.use(
   cors({
@@ -22,6 +23,7 @@ app.use(express.json());
 
 app.use("/user", userrouter);
 app.use("/pet", petrouter);
+app.use('/cart',cartrouter);
 
 app.get("/", (req, res) => {
   res.send("response from express");
